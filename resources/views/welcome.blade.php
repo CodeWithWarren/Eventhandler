@@ -439,7 +439,7 @@
                     <div class="padding-section-small">
                         <div class="w-layout-grid layout-component-grid cc-feature-3">
                             <div id="w-node-_4eb0809d-a9aa-e80c-aa5e-bec13506009a-0224a4cf" data-w-id="4eb0809d-a9aa-e80c-aa5e-bec13506009a" style="opacity:90%" class="layout-image-wrapper">
-                                <img src="/img/picture2.jpg" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 43vw, (max-width: 1439px) 42vw, (max-width: 1919px) 600px, 760px" srcset="/img/picture2.jpg 500w, /img/picture2.jpg 800w, /img/picture2.jpg 1080w, /img/picture2.jpg 1600w, /img/picture2.jpg 1742w" alt="Cut Kubernetes cost by up to 50% "/>
+                                <img src="/img/sample-img2.png" loading="lazy" sizes="(max-width: 779px) 100vw, (max-width: 1067px) 90vw, (max-width: 991px) 43vw, (max-width: 1439px) 42vw, (max-width: 1919px) 1979px, 2079px" srcset="/img/sample-img2.png 500w, /img/sample-img2.png 800w, /img/sample-img2.png 1080w, /img/sample-img2.png 1600w, /img/sample-img2.png 2558w" alt="Control Kubernetes with intelligence "/>
                             </div>
                             <div class="layout-content">
                                 <div class="margin-bottom margin-small">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html :class="{ 'theme-dark': dark }" x-data="data()" lang="en">
+<html x-data="data()" lang="en">
   <head>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
@@ -28,16 +28,16 @@
   </head>
   <body>
     <div
-      class="flex h-screen bg-gray-50 dark:bg-gray-900"
+      class="flex h-screen bg-gray-50"
       :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
       <!-- Desktop sidebar -->
       <aside
-        class="z-20 hidden w-64 overflow-y-auto bg-blue-100 dark:bg-gray-800 md:block flex-shrink-0"
+        class="z-20 hidden w-64 overflow-y-auto bg-blue-100 md:block flex-shrink-0"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
+        <div class="py-4 text-gray-500">
           <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+            class="ml-6 text-lg font-bold text-gray-800"
             href="#"
           >
             EVENT HANDLER SYSTEM
@@ -45,7 +45,7 @@
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800"
                 href="{{ route('admin') }}"
               >
                 <svg
@@ -69,7 +69,7 @@
           <ul>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800"
                 href="#"
               >
                 <svg
@@ -95,7 +95,7 @@
 
             <li class="relative px-6 py-3">
               <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800"
                 @click="togglePagesMenu"
                 aria-haspopup="true"
               >
@@ -137,35 +137,35 @@
                   x-transition:leave="transition-all ease-in-out duration-300"
                   x-transition:leave-start="opacity-100 max-h-xl"
                   x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50"
                   aria-label="submenu"
                 >
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/login.html">Login</a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/create-account.html">
                       Create account
                     </a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
                     </a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/404.html">404</a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
@@ -196,7 +196,7 @@
         class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
       ></div>
       <aside
-        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
+        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white md:hidden"
         x-show="isSideMenuOpen"
         x-transition:enter="transition ease-in-out duration-150"
         x-transition:enter-start="opacity-0 transform -translate-x-20"
@@ -207,9 +207,9 @@
         @click.away="closeSideMenu"
         @keydown.escape="closeSideMenu"
       >
-        <div class="py-4 text-gray-500 dark:text-gray-400">
+        <div class="py-4 text-gray-500">
           <a
-            class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200"
+            class="ml-6 text-lg font-bold text-gray-800"
             href="#"
           >
             EVENT HANDLER SYSTEM
@@ -221,7 +221,7 @@
                 aria-hidden="true"
               ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800"
                 href="{{ route('admin')}}"
               >
                 <svg
@@ -245,7 +245,7 @@
           <ul>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800"
                 href="{{ route('admin.students')}}"
               >
                 <svg
@@ -268,7 +268,7 @@
             </li>
             <li class="relative px-6 py-3">
               <button
-                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800"
                 @click="togglePagesMenu"
                 aria-haspopup="true"
               >
@@ -310,35 +310,35 @@
                   x-transition:leave="transition-all ease-in-out duration-300"
                   x-transition:leave-start="opacity-100 max-h-xl"
                   x-transition:leave-end="opacity-0 max-h-0"
-                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+                  class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50"
                   aria-label="submenu"
                 >
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/login.html">Login</a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/create-account.html">
                       Create account
                     </a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/forgot-password.html">
                       Forgot password
                     </a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/404.html">404</a>
                   </li>
                   <li
-                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                    class="px-2 py-1 transition-colors duration-150 hover:text-gray-800"
                   >
                     <a class="w-full" href="pages/blank.html">Blank</a>
                   </li>
@@ -357,9 +357,9 @@
         </div>
       </aside>
       <div class="flex flex-col flex-1 w-full">
-        <header class="z-10 py-4 bg-blue-100 shadow-md dark:bg-gray-800">
+        <header class="z-10 py-4 bg-blue-100 shadow-md">
           <div
-            class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
+            class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600"
           >
             <!-- Mobile hamburger -->
             <button
@@ -400,7 +400,7 @@
                   </svg>
                 </div>
                 <input
-                  class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md dark:placeholder-gray-500 dark:focus:shadow-outline-gray dark:focus:placeholder-gray-600 dark:bg-gray-700 dark:text-gray-200 focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
+                  class="w-full pl-8 pr-2 text-sm text-gray-700 placeholder-gray-600 bg-gray-100 border-0 rounded-md focus:placeholder-gray-500 focus:bg-white focus:border-purple-300 focus:outline-none focus:shadow-outline-purple form-input"
                   type="text"
                   placeholder="Search for projects"
                   aria-label="Search"
@@ -431,12 +431,12 @@
                           x-transition:leave-end="opacity-0"
                           @click.away="isProfileMenuOpen = false"
                           @keydown.escape="isProfileMenuOpen = false"
-                          class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md dark:border-gray-700 dark:text-gray-300 dark:bg-gray-700"
+                          class="absolute right-0 w-56 p-2 mt-2 space-y-2 text-gray-600 bg-white border border-gray-100 rounded-md shadow-md"
                           aria-label="submenu"
                       >
                           <li class="flex">
                               <a
-                                  class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                  class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                                   href="#"
                               >
                                   <svg
@@ -458,7 +458,7 @@
                           </li>
                           <li class="flex">
                               <a
-                                  class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                  class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                                   href="#"
                               >
                                   <svg
@@ -481,7 +481,7 @@
                           </li>
                           <li class="flex">
                               <a
-                                  class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800 dark:hover:bg-gray-800 dark:hover:text-gray-200"
+                                  class="inline-flex items-center w-full px-2 py-1 text-sm font-semibold transition-colors duration-150 rounded-md hover:bg-gray-100 hover:text-gray-800"
                                   href="#"
                               >
                                   <svg
@@ -510,20 +510,20 @@
         <main class="h-full overflow-y-auto">
           <div class="container px-6 mx-auto grid">
             <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+              class="my-6 text-2xl font-semibold text-gray-700"
             >
               Students
             </h2>
              
             <form class="max-w-md mx-full mb-5">   
-                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
                 <div class="relative">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                         </svg>
                     </div>
-                    <input type="search" id="default-search" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search..." required />
+                    <input type="search" id="default-search" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500" placeholder="Search..." required />
                 </div>
             </form>
 
@@ -535,7 +535,7 @@
                 <table class="w-full whitespace-no-wrap">
                   <thead>
                     <tr
-                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b bg-gray-50"
                     >
                       <th class="px-4 py-3">#</th>
                       <th class="px-4 py-3">Name</th>
@@ -544,9 +544,9 @@
                     </tr>
                   </thead>
                   <tbody
-                    class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800"
+                    class="bg-white divide-y"
                   >
-                    <tr class="text-gray-700 dark:text-gray-400">
+                    <tr class="text-gray-700">
                       <td class="px-4 py-3 text-sm">
                         <!-- Implement forelse to auto increment this number -->
                         1 
@@ -577,22 +577,26 @@
 
                       <td class="px-4 py-3 text-xs">
                         <span
-                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100"
+                          class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full"
                         >
                           Student
                         </span>
                       </td>
                       <td class="px-4 py-3 text-xs space-x-2 flex justify-center">
-                        <button @click="openInfoModal" class="px-4 py-2 font-semibold leading-tight text-white bg-green-400 rounded-full dark:bg-green-700 dark:text-green-100">More Info</button>
-                        <button @click="modal" class="px-4 py-2 font-semibold leading-tight text-white bg-blue-400 rounded-full dark:bg-blue-700 dark:text-blue-100">Update</button>
-                        <button class="px-4 py-2 font-semibold leading-tight text-white bg-red-400 rounded-full dark:bg-red-700 dark:text-red-100">Delete</button>
+                        <button @click="openInfoModal" class="flex items-center px-4 py-2 font-semibold leading-tight text-white bg-green-400 rounded-full">
+                          <!-- Icon SVG -->
+                          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M12 12h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"></path>
+                          </svg>
+                          More Info
+                        </button>
                       </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
               <div
-                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t dark:border-gray-700 bg-gray-50 sm:grid-cols-9 dark:text-gray-400 dark:bg-gray-800"
+                class="grid px-4 py-3 text-xs font-semibold tracking-wide text-gray-500 uppercase border-t bg-gray-50 sm:grid-cols-9"
               >
                 <span class="flex items-center col-span-3">
                   Showing (number of total students) total students
@@ -603,10 +607,11 @@
           </div>
         </main>
       </div>
+    </div>
 
-      <!-- Modal -->
+    <!-- Modal -->
 
-      <div
+    <div
         x-show="isModalOpen"
         x-transition:enter="transition ease-out duration-150"
         x-transition:enter-start="opacity-0"
@@ -627,14 +632,14 @@
           x-transition:leave-end="opacity-0  transform translate-y-1/2"
           @click.away="closeInfoModal"
           @keydown.escape="closeInfoModal"
-          class="w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg dark:bg-gray-800 sm:rounded-lg sm:m-4 sm:max-w-xl border-t-4 border-green-500"
+          class="w-full px-6 py-4 overflow-hidden bg-white rounded-t-lg sm:rounded-lg sm:m-4 sm:max-w-xl border-t-4 border-green-500"
           role="dialog"
           id="modal"
         >
           <!-- Remove header if you don't want a close icon. Use modal body to place modal tile. -->
           <header class="flex justify-end">
             <button
-              class="inline-flex items-center justify-center w-6 h-6 text-gray-400 transition-colors duration-150 rounded dark:hover:text-gray-200 hover: hover:text-gray-700"
+              class="inline-flex items-center justify-center w-6 h-6 text-gray-400 transition-colors duration-150 rounded hover: hover:text-gray-700"
               aria-label="close"
               @click="closeInfoModal"
             >
@@ -656,7 +661,7 @@
           <!-- Modal body -->
           <div class="mt-1 mb-6 text-center">
             <!-- Modal title -->
-            <p class="mb-2 text-lg font-semibold text-gray-700 dark:text-gray-300">
+            <p class="mb-2 text-lg font-semibold text-gray-700">
               Student Informations
             </p>
             <hr class="border-b-8 border-solid border-b-white">
@@ -665,13 +670,13 @@
               <div class="flex-1">
                 <div class="mb-4">
                   <div class="relative">
-                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="RFID">
+                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="RFID" readonly>
                     <i class="fas fa-hashtag absolute left-3 top-2.5 text-gray-500"></i>
                   </div>
                 </div>
                 <div class="">
                   <div class="relative">
-                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Student ID">
+                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Student ID" readonly>
                     <i class="fas fa-id-badge absolute left-3 top-2.5 text-gray-500"></i>
                   </div>
                 </div>
@@ -685,48 +690,47 @@
             </div>
             <div class="grid grid-cols-3 gap-4">
               <div class="relative mb-4">
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Firstname">
+                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Firstname" readonly>
                 <i class="fas fa-user absolute left-3 top-2.5 text-gray-500"></i>
               </div>
               <div class="relative mb-4">
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Middlename">
+                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Middlename" readonly>
                 <i class="fas fa-user absolute left-3 top-2.5 text-gray-500"></i>
               </div>
               <div class="relative mb-4">
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Lastname ">
+                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Lastname" readonly>
                 <i class="fas fa-user absolute left-3 top-2.5 text-gray-500"></i>
               </div>
             </div>
             <div class="mb-4">
               <div class="relative">
                 <i class="fas fa-building absolute left-3 top-2.5 text-gray-500"></i>
-                  <select id="extension" name="extension" class="w-full border border-gray-300 rounded-lg p-2 pl-10" required>
-                    <option value="">Extension</option>
-                    <option value="Jr.">Jr.</option>
-                    <option value="Sr.">Sr.</option>
-                    <option value="I">I</option>
-                    <option value="II">II</option>
-                    <option value="III">III</option>
-                    <option value="IV">IV</option>
-                    <option value="V">V</option>
-                  </select>
-                </div>
-              </div>
-            <div class="mb-4">
-              <div class="relative">
-                <i class="fas fa-user absolute left-3 top-2.5 text-gray-500"></i>
-                  <select id="status" name="status" class="w-full border border-gray-300 rounded-lg p-2 pl-10" required>
-                  <option value="">Status</option>
-                  <option value="Student">Student</option>
-                  <option value="Instructor">Instructor</option>
-                  <option value="Alumni">Alumni</option>
-                  </select>
-                </div>
+                <select id="extension" name="extension" class="w-full border border-gray-300 rounded-lg p-2 pl-10" readonly>
+                  <option value="">Extension</option>
+                  <option value="Jr.">Jr.</option>
+                  <option value="Sr.">Sr.</option>
+                  <option value="I">I</option>
+                  <option value="II">II</option>
+                  <option value="III">III</option>
+                  <option value="IV">IV</option>
+                  <option value="V">V</option>
+                </select>
               </div>
             </div>
             <div class="mb-4">
               <div class="relative">
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Mobile No.">
+                <i class="fas fa-user absolute left-3 top-2.5 text-gray-500"></i>
+                <select id="status" name="status" class="w-full border border-gray-300 rounded-lg p-2 pl-10" readonly>
+                  <option value="">Status</option>
+                  <option value="Student">Student</option>
+                  <option value="Instructor">Instructor</option>
+                  <option value="Alumni">Alumni</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="relative">
+                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 pl-10" placeholder="Mobile No." readonly>
                 <i class="fas fa-phone absolute left-3 top-2.5 text-gray-500"></i>
               </div>
             </div>
@@ -734,11 +738,11 @@
             <hr>
 
           <footer
-            class="flex flex-col items-center justify-center px-6 py-3 -mx-6 -mb-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-50 dark:bg-gray-800"
+            class="flex flex-col items-center justify-center px-6 py-3 -mx-6 -mb-4 space-y-4 sm:space-y-0 sm:space-x-6 sm:flex-row bg-gray-50"
           >
             <button
               @click="closeInfoModal"
-              class="w-full px-5 py-3 text-sm font-medium leading-5 text-black text-black transition-colors duration-150 border border-gray-300 rounded-lg dark:text-black sm:px-4 sm:py-2 sm:w-auto active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-black focus:outline-none focus:shadow-outline-gray"
+              class="w-full px-5 py-3 text-sm font-medium leading-5 text-black text-black transition-colors duration-150 border border-gray-300 rounded-lg sm:px-4 sm:py-2 sm:w-auto active:bg-transparent hover:border-gray-500 focus:border-gray-500 active:text-black focus:outline-none focus:shadow-outline-gray"
             >
               Close
             </button>
@@ -748,22 +752,18 @@
 
       <!-- End of modal -->
 
-      <!-- Just revise the modal above for update -->
-
-    </div>
-
-        <script>
-            function displayImage(event) {
-                const file = event.target.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        document.getElementById('circleImage').setAttribute('src', e.target.result);
-                    }
-                    reader.readAsDataURL(file);
-                }
-            }
-        </script>  
+    <script>
+      function displayImage(event) {
+        const file = event.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            document.getElementById('circleImage').setAttribute('src', e.target.result);
+          }
+          reader.readAsDataURL(file);
+        }
+      }
+    </script>  
 
     <script src="/js/init-alpine.js"></script>
     <script src="/js/focus-trap.js"></script>
